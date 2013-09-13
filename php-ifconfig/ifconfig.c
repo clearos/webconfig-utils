@@ -59,7 +59,7 @@ static void _php_if_free(zend_rsrc_list_entry *rsrc TSRMLS_DC);
  *
  * Every user visible function must have an entry in ifconfig_functions[].
  */
-function_entry ifconfig_functions[] = {
+zend_function_entry ifconfig_functions[] = {
 	PHP_FE(ifconfig_init, NULL)
 	PHP_FE(ifconfig_list, NULL)
 	PHP_FE(ifconfig_address, NULL)
