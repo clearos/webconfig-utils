@@ -1,8 +1,8 @@
 %define enginedir /usr/clearos/sandbox/
 
 Name: webconfig-utils
-Version: 6.1.0
-Release: 3%dist
+Version: 6.1.1
+Release: 1%dist
 Group: Applications/Modules
 Summary: Web-based administration tool core
 Source: %{name}-%{version}.tar.gz
@@ -46,15 +46,6 @@ echo "extension=ifconfig.so" > $RPM_BUILD_ROOT%{enginedir}%{_sysconfdir}/php.d/i
 # statvfs PHP module
 cp php-statvfs/modules/statvfs.so $RPM_BUILD_ROOT%{enginedir}%{_libdir}/php/modules
 echo "extension=statvfs.so" > $RPM_BUILD_ROOT%{enginedir}%{_sysconfdir}/php.d/statvfs.ini
-
-%post
-/sbin/service webconfig condrestart >/dev/null 2>&1
-exit 0
-
-%preun
-if [ $1 = 0 ]; then
-	/sbin/service webconfig restart >/dev/null 2>&1
-fi
 
 %clean
 rm -rf $RPM_BUILD_ROOT
