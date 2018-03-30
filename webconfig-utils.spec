@@ -3,7 +3,7 @@
 Name: webconfig-utils
 Version: 7.0.1
 Release: 1%dist
-Group: Applications/Modules
+Group: Applications/System
 Summary: Web-based administration tool core
 Source: %{name}-%{version}.tar.gz
 License: GPL
