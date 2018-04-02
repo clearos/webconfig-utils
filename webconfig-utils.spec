@@ -1,14 +1,15 @@
 %define enginedir /usr/clearos/sandbox/
 
 Name: webconfig-utils
-Version: 7.4.0
+Version: 7.4.1
 Release: 1%dist
 Group: Applications/System
-Summary: Web-based administration tool core
+Summary: Tools from the webconfig API framework
 Source: %{name}-%{version}.tar.gz
 License: GPL
 Requires: webconfig-php
 Requires: util-linux
+Requires: system-base >= 7.4.2
 BuildRequires: webconfig-php-devel
 BuildRequires: pam-devel
 
